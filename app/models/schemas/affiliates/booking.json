@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "required": [
+    "code",
+    "start_date",
+    "end_date",
+    "nights",
+    "guest_details",
+    "status_type",
+    "guest_first_name",
+    "guest_last_name",
+    "guest_phone_numbers",
+    "guest_email",
+    "host_currency",
+    "expected_payout_amount",
+    "listing_security_price_accurate",
+    "total_paid_amount_accurate"
+  ],
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string"
+    },
+    "end_date": {
+      "type": "string"
+    },
+    "nights": {
+      "type": "integer"
+    },
+    "guest_details": {
+      "type": "object",
+      "properties": {
+        "number_of_adults": {
+          "type": "integer"
+        },
+        "number_of_children": {
+          "type": "integer"
+        },
+        "number_of_infants": {
+          "type": "integer"
+        }
+      },
+      "required": ["number_of_adults", "number_of_children", "number_of_infants"]
+    },
+    "status_type": {
+      "type": "string"
+    },
+    "guest_first_name": {
+      "type": "string"
+    },
+    "guest_last_name": {
+      "type": "string"
+    },
+    "guest_phone_numbers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "guest_email": {
+      "type": "string"
+    },
+    "host_currency": {
+      "type": "string"
+    },
+    "expected_payout_amount": {
+      "type": "string"
+    },
+    "listing_security_price_accurate": {
+      "type": "string"
+    },
+    "total_paid_amount_accurate": {
+      "type": "string"
+    }
+  }
+}
