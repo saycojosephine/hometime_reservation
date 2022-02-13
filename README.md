@@ -4,24 +4,30 @@ Rails API with 1 endpoint that accepts multiple payload.
 Requirements:
 ruby 2.7.4
 
-Setup:
-1. Install the gems
-  $ bundle install
-2. Create the database
-  $ rails db:create
-3. Run the migration
-  $ rails db:migrate
-4. Run the application
-  $ rails s
+## Setup:
+
+- Install the gems
+
+  `$ bundle install`
+- Create the database
+
+  `$ rails db:create`
+- Run the migration
+
+  `$ rails db:migrate`
+- Run the application
+
+  `$ rails s`
   
-Run the test:
-  $ bundle exec rspec
+### Run the test:
+  `$ bundle exec rspec`
 
 
-Endpoint:
-POST http://127.0.0.1:3000/api/v1/reservations
+### Endpoint:
+> POST http://127.0.0.1:3000/api/v1/reservations
 
 Sample payload 1:
+ ```
 {
    "reservation_code":"YYY12345678",
    "start_date":"2021-04-14",
@@ -43,8 +49,10 @@ Sample payload 1:
    "security_price":"500",
    "total_price":"4700.00"
 }
+```
 
 Response:
+```
 {
     "success": true,
     "reservation": {
@@ -67,8 +75,10 @@ Response:
         "updated_at": "2022-02-13T08:13:59.270Z"
     }
 }
+```
 
 Sample payload 2:
+```
 {
    "reservation":{
       "code":"XXX12345678",
@@ -96,8 +106,10 @@ Sample payload 2:
       "total_paid_amount_accurate":"4300.00"
    }
 }
+```
 
 Response:
+```
 {
     "success": true,
     "reservation": {
@@ -120,5 +132,6 @@ Response:
         "updated_at": "2022-02-13T08:16:10.927Z"
     }
 }
+```
 
 
